@@ -22,3 +22,7 @@ The *leave* variable assigns an attitude towards the Brexit to the agents indica
 * A value of 1 represents a 100% pro-Leave attitude (or 0% pro-Remain attitude)
 * A value of 0.5 represents undecided voters (critical threshold)
 
+<img width="379" alt="Captura de pantalla 2023-07-31 a las 19 53 01" src="https://github.com/isazeberio/gama-abm-tfm/assets/113541772/bb4129b8-cbd5-46c6-b99c-590c25d9d47b">
+
+
+

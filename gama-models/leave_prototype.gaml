@@ -72,7 +72,7 @@ global {
 	init {
 		// Save initialization data
 		// rewrite: false allow us to save the results of different simulations in differnet rows
-		save [n_leave_voters, n_remain_voters, n_undecided_voters] to: "initial_values.csv" format: csv rewrite: false ;
+		save [n_leave_voters, n_remain_voters, n_undecided_voters] to: "initial_values.csv" format: "csv" rewrite: false ;
 	
 		
 		switch graph_type {
@@ -365,7 +365,7 @@ experiment leave_campaign type: gui  {
 	// Save results at the end of the simulation
 	reflex save_results  {
     ask simulations {
-    save [self.name, [n_leave_voters, n_remain_voters]] to: "gui.csv" type: "csv" rewrite:false;
+    save [self.name, [n_leave_voters, n_remain_voters]] to: "gui.csv" format:csv rewrite:false;
     // This documents can be later open in Gephi to improve the visualization of the graph
     save the_graph to:"my_graph.graphml" format:"graphml";
     save the_graph to:"my_graph.g6" format: "graph6" ;
@@ -412,7 +412,7 @@ experiment leave type: batch repeat:1 until: (cycle = 30) {
 	
 	reflex save_results when: (cycle > 1){
     ask simulations {
-    save [self.name, [n_leave_voters, n_remain_voters, n_undecided_voters]] to: "leave_batch_small_wordl.csv" type: "csv" rewrite:false;
+    save [self.name, [n_leave_voters, n_remain_voters, n_undecided_voters]] to: "leave_batch_small_wordl.csv" format:csv rewrite:false;
     }
   }
 	// To choose the layout in the experiment 
